@@ -19,7 +19,8 @@ Learn more about Q-Learning:
 
 
 ### Example
-Below we present a *mouse player* after **4500 generations** of reinforcement learning:
+Below we present a *mouse player* after **4500 generations** of reinforcement learning:  
+
 ![](resuorces/snapshot.gif)
 
 

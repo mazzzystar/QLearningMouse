@@ -1,7 +1,10 @@
-Game of mouse and cat with Q-Learning.
+Mouse-and-Cat game with Q-Learning.
 ===================================================
 
-<b>QLearningMouse</b>  is a small cat-mouse-cheese game based on [Q-Learning](https://en.wikipedia.org/wiki/Q-learning). The original version is from [vmayoral](https://github.com/vmayoral): [basic_reinforcement_learning:tutorial1](https://github.com/fancoo/basic_reinforcement_learning/tree/master/tutorial1), I resconstructed his code to make the game more configurable, and what different most is that I use [BFS](https://en.wikipedia.org/wiki/Breadth-first_search) when cat chasing the AI mouse, so it looks much more fierce :P 
+<b>QLearningMouse</b>  is a small cat-mouse-cheese game based on [Q-Learning](https://en.wikipedia.org/wiki/Q-learning). The original version is from [vmayoral](https://github.com/vmayoral): [basic_reinforcement_learning:tutorial1](https://github.com/vmayoral/basic_reinforcement_learning/tree/master/tutorial1), I resconstructed his code to make the game more configurable, and what different most is that I use breadth-first-search([BFS](https://en.wikipedia.org/wiki/Breadth-first_search)) when cat chasing the AI mouse, so it looks much more fierce :P 
+
+### About the game
+Cat chases the mouse always in the shortest path with BFS, however the mouse first does not know the danger of being eaten. It earns reward value of 50 when eating the cheese,  yet gaining reward value of -100 when dead.
 
 ### Algorithm  
 The basic algorithm of Q-Learning is:  
@@ -19,9 +22,16 @@ Learn more about Q-Learning:
 
 
 ### Example
-Below we present a *mouse player* after **4500 generations** of reinforcement learning:  
+Below we present a *mouse player* after **300 generations** of reinforcement learning:  
+* blue is for mouse.
+* black is for cat.
+* orange is for cheese.
 
-![](resuorces/snapshot.gif)
+![](resources/snapshot1.gif)
+
+After **330000 generations**:  
+
+![](resources/snapshot2.gif)
 
 
 ### Reproduce it yourself

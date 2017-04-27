@@ -45,11 +45,12 @@ class Cat(setup.Agent):
         if self.cell == target:
             return
 
-        best_move = None
         for n in self.cell.neighbors:
             if n == target:
-                best_move = target  # if next move can go towards target
-                break
+                self.cell = target  # if next move can go towards target
+                return
+
+        best_move = None
         q = Queue()
         start = (self.cell.y, self.cell.x)
         end = (target.y, target.x)
@@ -81,6 +82,7 @@ class Cat(setup.Agent):
                         assert len(k) == 1
                         last = preV[(k[0][0], k[0][1])]
                     seq.reverse()
+                    print seq
 
                     best_move = world.grid[seq[0][0]][seq[0][1]]
 
@@ -88,7 +90,13 @@ class Cat(setup.Agent):
                 step += 1
                 V[(ny, nx)] = step
 
-        self.cell = best_move
+        if best_move is not None:
+            self.cell = best_move
+
+        else:
+            dir = random.randrange(cfg.directions)
+            self.go_direction(dir)
+            print "!!!!!!!!!!!!!!!!!!"
 
     def get_value(self, mdict, key):
         try:

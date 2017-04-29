@@ -1,10 +1,12 @@
-Mouse-and-Cat game with Q-Learning.
+Cat-and-Mouse game with Q-Learning.
 ===================================================
 
-<b>QLearningMouse</b>  is a small cat-mouse-cheese game based on [Q-Learning](https://en.wikipedia.org/wiki/Q-learning). The original version is from [vmayoral](https://github.com/vmayoral): [basic_reinforcement_learning:tutorial1](https://github.com/vmayoral/basic_reinforcement_learning/tree/master/tutorial1), I resconstructed his code to make the game more configurable, and what different most is that I use breadth-first-search([BFS](https://en.wikipedia.org/wiki/Breadth-first_search)) when cat chasing the AI mouse, so it looks much more fierce :P 
+<b>QLearningMouse</b>  is a small cat-mouse-cheese game based on [Q-Learning](https://en.wikipedia.org/wiki/Q-learning). The original version is by [vmayoral](https://github.com/vmayoral): [basic_reinforcement_learning:tutorial1](https://github.com/vmayoral/basic_reinforcement_learning/tree/master/tutorial1), I resconstructed his code to make the game more configurable, and what different most is that I use breadth-first-search([BFS](https://en.wikipedia.org/wiki/Breadth-first_search)) when cat chasing the AI mouse, so it looks much more fierce :P 
 
 ### About the game
-Cat chases the mouse always in the shortest path with BFS, however the mouse first does not know the danger of being eaten. It earns reward value of 50 when eating the cheese,  yet gaining reward value of -100 when dead.
+* cat always chase the mouse in the shortest path, however the mouse first does not know the danger of being eaten. 
+* <b>mouse win</b> when eating the cheese and earns rewards value of 50, then a new cheese will be produced in a random grid.
+* <b>cat win</b> when eating the mouse, the latter will gain rewards value of -100 when dead. Then it will relive in a random grid.
 
 ### Algorithm  
 The basic algorithm of Q-Learning is:  

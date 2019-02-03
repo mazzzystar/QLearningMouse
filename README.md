@@ -24,16 +24,20 @@ Learn more about Q-Learning:
 
 
 ## Example
-Below we present a *mouse player* after **300 generations** of reinforcement learning:  
+Below we present two GIF to plot the reinforcement learning result:  
 * blue is for mouse.
 * black is for cat.
 * orange is for cheese.
+
+After **300 generations**: 
 
 ![](resources/snapshot1.gif)
 
 After **339300 generations**:  
 
 ![](resources/snapshot2.gif)
+
+We can see **by using Q-learning algorithm, the mouse is becomming much more smart**, until the moment cat can never catch it.
 
 
 ## Reproduce it yourself

@@ -25,9 +25,9 @@ Learn more about Q-Learning:
 
 ## Example
 Below we present two GIF to plot the reinforcement learning result:  
-* blue is for mouse.
-* black is for cat.
-* orange is for cheese.
+* `blue` is for mouse.
+* `black` is for cat.
+* `orange` is for cheese.
 
 After **300 generations**: 
 

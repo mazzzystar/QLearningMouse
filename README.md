@@ -37,7 +37,7 @@ After **339300 generations**:
 
 ![](resources/snapshot2.gif)
 
-We can see **by using Q-learning algorithm, the mouse is becomming much more smart**, until the moment cat can never catch it.
+By using **Q-learning algorithm**, the mouse is becomming smarter, until a moment cat can never catch it again.
 
 
 ## Reproduce it yourself
